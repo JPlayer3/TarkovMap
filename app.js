@@ -1,14 +1,15 @@
 // --- マップの初期設定 ---
-const MAP_SIZE = 7832; // Fandomのマップ画像のピクセルサイズに合わせて調整してください (例: 512x512)
-const mapBounds = [[0, 0], [MAP_SIZE, MAP_SIZE]];
-const centerCoords = [MAP_SIZE / 2, MAP_SIZE / 2];
+const MAP_HEIGHT = 7832; // 高さ（Y座標の最大値）
+const MAP_WIDTH = 5016; // 幅（X座標の最大値）
+// [Ymin, Xmin] と [Ymax, Xmax] で境界を設定
+const mapBounds = [[0, 0], [MAP_HEIGHT, MAP_WIDTH]];
 
 // マップを初期化し、カスタム座標系 (CRS.Simple) を設定
 const map = L.map('map', {
     crs: L.CRS.Simple,
     minZoom: -3,
     maxZoom: 2,
-    center: centerCoords,
+center: [MAP_HEIGHT / 2, MAP_WIDTH / 2], // 中心座標も変更
     zoom: -1
 });
 
