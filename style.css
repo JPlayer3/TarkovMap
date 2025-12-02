@@ -1,0 +1,18 @@
+/* ブラウザのデフォルトスタイルをリセット */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* マップコンテナを画面全体に広げる */
+#map {
+    height: 100vh;
+    width: 100%;
+}
+
+/* Leafletのコントロールパネル（レイヤー切り替え）をより見やすくするためのスタイル調整 */
+.leaflet-control-layers-expanded {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+}

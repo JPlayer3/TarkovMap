@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Crossroads Exfil",
+    "type": "Exfil",
+    "coords": [450, 100],
+    "description": "Always open.",
+    "icon": "Exfil.png"
+  },
+  {
+    "name": "Military Base Loot",
+    "type": "Loot",
+    "coords": [250, 400],
+    "description": "High value loose loot spawns.",
+    "icon": "Loot.png"
+  },
+  {
+    "name": "Old Gas Station",
+    "type": "Exfil",
+    "coords": [100, 500],
+    "description": "Requires green flare.",
+    "icon": "Exfil.png"
+  },
+  {
+    "name": "Dorm Room 203",
+    "type": "Key",
+    "coords": [350, 250],
+    "description": "Key required for access.",
+    "icon": "Key.png"
+  }
+]
