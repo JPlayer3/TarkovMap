@@ -1,16 +1,19 @@
 // --- マップの初期設定 ---
-const MAP_HEIGHT = 7832; // 高さ（Y座標の最大値）
-const MAP_WIDTH = 5016; // 幅（X座標の最大値）
+const MAP_WIDTH = 7832;  // 横長画像の実際の幅（X軸）
+const MAP_HEIGHT = 5016; // 横長画像の実際の高さ（Y軸）
 // [Ymin, Xmin] と [Ymax, Xmax] で境界を設定
 const mapBounds = [[0, 0], [MAP_HEIGHT, MAP_WIDTH]];
+const centerCoords = [MAP_HEIGHT / 2, MAP_WIDTH / 2];
 
 // マップを初期化し、カスタム座標系 (CRS.Simple) を設定
 const map = L.map('map', {
     crs: L.CRS.Simple,
-    minZoom: -3,
-    maxZoom: 2,
-center: [MAP_HEIGHT / 2, MAP_WIDTH / 2], // 中心座標も変更
-    zoom: -1
+    // minZoomとmaxZoomは、この大きなサイズに合わせて調整が必要です
+    minZoom: -4, // 👈 非常に大きな画像なので、より大きな縮小を許可
+    maxZoom: 0,  // 👈 拡大しすぎるとぼやけるため最大を制限
+    center: centerCoords,
+    // 💡 初期表示で全体が見えるように、ズームレベルを調整 (例: -3)
+    zoom: -3 
 });
 
 // マップの境界を設定し、画面外へのスクロールを防止
