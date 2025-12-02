@@ -1,5 +1,7 @@
 // --- マップの初期設定 ---
-const MAP_SIZE = 512; // Fandomのマップ画像のピクセルサイズに合わせて調整してください (例: 512x512)
+const MAP_HEIGHT = 7832; // 高さ（Y座標の最大値）
+const MAP_WIDTH = 5016; // 幅（X座標の最大値）
+// [Ymin, Xmin] と [Ymax, Xmax] で境界を設定
 const mapBounds = [[0, 0], [MAP_SIZE, MAP_SIZE]];
 const centerCoords = [MAP_SIZE / 2, MAP_SIZE / 2];
 
